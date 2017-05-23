@@ -1,0 +1,19 @@
+﻿@using Arc_CoreUi.Core.ModelViews
+@model ArcViewModel
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    @foreach (var meta in Model.Metas)
+    {
+        <meta name="@meta.Key" content="@meta.Value">
+    }
+    <link rel="shortcut icon" href="@Model.ShortcutIcon">
+    <title>@Model.PageTitle</title>
+    <!-- StyleSheets -->
+
+    @foreach (var stylesheet in Model.StyleSheets)
+    {
+        <link href="@stylesheet" rel="stylesheet">
+    }
+</head>

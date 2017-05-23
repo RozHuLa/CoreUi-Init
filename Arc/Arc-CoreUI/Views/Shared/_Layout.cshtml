@@ -1,0 +1,34 @@
+﻿<!--
+ * CoreUI - Open Source Bootstrap Admin Template
+ * @@version v1.0.0-alpha.5
+ * @@link http://coreui.io
+ * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+ * @@license MIT
+ -->
+@using Arc_CoreUi.Core.ModelViews
+@model ArcViewModel
+@{
+    Layout = "~/Views/Shared/__MasterLayout.cshtml";
+}
+
+<div class="app-body">
+    <div class="sidebar">
+        <!-- Sidebar - Left -->
+        @Html.Partial("components/_sidebar_left", Model)
+    </div>
+    <!-- Main content -->
+    <main class="main">
+        <!-- Breadcrumb -->
+        @Html.Partial("components/_breadcrumbs", Model)
+
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+    <aside class="aside-menu">
+        <!-- Sidebar - Right -->
+        @Html.Partial("components/_sidebar_right", Model)
+    </aside>
+
+</div>
